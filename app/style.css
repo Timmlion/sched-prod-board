@@ -2,15 +2,22 @@ body { margin: 0; font: 15px/1.4 system-ui, sans-serif; color: #1d1d1f; backgrou
 header, main, footer { padding: 12px 24px; }
 h1 { margin: 0; font-size: 22px; }
 .sub { margin: 2px 0 0; color: #666; }
+.loader, .empty { color: #666; }
 .list { list-style: none; margin: 0; padding: 0; max-width: 960px; }
-.row { display: grid; grid-template-columns: 90px 50px 1fr 200px auto; gap: 12px; align-items: center; min-height: 44px; padding: 0 12px; border-bottom: 1px solid #e5e5e5; background: #fff; }
+.row { display: grid; grid-template-columns: 90px 50px 1fr 200px 70px; gap: 12px; align-items: center; min-height: 44px; padding: 0 12px; border-bottom: 1px solid #e5e5e5; background: #fff; cursor: pointer; }
+.row:hover { background: #eef4ff; outline: 2px solid #4a90d9; outline-offset: -2px; }
 .row .id { font-family: ui-monospace, monospace; }
 .row.sev1 .sev { color: #b00020; font-weight: 600; }
 .row.sev2 .sev { color: #a15c00; }
 .row time { color: #555; font-variant-numeric: tabular-nums; }
+.row .status { color: #0a7a33; font-weight: 600; }
+.panel { position: fixed; top: 64px; right: 24px; width: 360px; padding: 16px 20px; border: 1px solid #d6d6d6; border-radius: 10px; background: #fff; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); }
+.panel-id { margin: 0 0 6px; font: 600 18px ui-monospace, monospace; }
+.panel-what { margin: 0 0 6px; }
+.panel-when { margin: 0 0 14px; color: #555; font-size: 13px; }
+.panel-actions { display: flex; gap: 8px; }
+.panel button { font: inherit; padding: 6px 14px; border: 1px solid #ccc; border-radius: 6px; background: #fff; cursor: pointer; }
+.panel button[data-testid="panel-ack"] { border-color: #2b6cb0; background: #2b6cb0; color: #fff; }
+.panel button:disabled { opacity: 0.5; cursor: default; }
+.panel .ghost { color: #444; }
 footer { color: #777; font-size: 13px; }
-.loader, .empty { color: #666; }
-.row .asked { color: #0a7a33; font-weight: 600; }
-.row button { font: inherit; padding: 4px 10px; border: 1px solid #ccc; border-radius: 6px; background: #fff; cursor: pointer; }
-.row button:disabled { color: #999; cursor: default; }
-.row:hover { background: #eef4ff; outline: 2px solid #4a90d9; outline-offset: -2px; }
