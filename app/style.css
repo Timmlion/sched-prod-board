@@ -13,3 +13,4 @@ footer { color: #777; font-size: 13px; }
 .row .asked { color: #0a7a33; font-weight: 600; }
 .row button { font: inherit; padding: 4px 10px; border: 1px solid #ccc; border-radius: 6px; background: #fff; cursor: pointer; }
 .row button:disabled { color: #999; cursor: default; }
+.row:hover { background: #eef4ff; outline: 2px solid #4a90d9; outline-offset: -2px; }
